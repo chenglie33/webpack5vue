@@ -36,6 +36,7 @@
     "vue-loader": "^15.9.6",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^5.11.0",
+    "webpack-chain": "^6.5.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }

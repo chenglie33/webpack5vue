@@ -99,8 +99,6 @@ const config = {
     },
 };
 
-path.join(__dirname, 'src/assets')
-
 
 module.exports = (env) => {
     console.log(`当前执行${env.mode}模式`);
