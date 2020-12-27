@@ -8,7 +8,8 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-
+const img = require('../assets/logo.png')
+console.log(img)
 export default {
   name: "Home",
   components: {
