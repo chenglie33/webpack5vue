@@ -9,6 +9,15 @@ module.exports = {
   },
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off"
+    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    	//关闭禁止混用tab和空格
+    "no-mixed-spaces-and-tabs": [0],
+    "no-async-promise-executor":0,
+    "no-misleading-character-class": 0,
+    "no-useless-catch": 0
+
+  },
+  globals: {
+    BASE_URL: true
   }
 };
