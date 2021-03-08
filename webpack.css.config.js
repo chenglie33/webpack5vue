@@ -11,8 +11,8 @@ module.exports.cssLoader  = function (config){
 const types = ["vue-modules", "vue", "normal-modules", "normal"];
 // types.forEach((item) => {
 config.module
-  .rule("less")
-  .test(/\.less$/)
+  .rule("scss")
+  .test(/\.scss|sass$/)
   .oneOf("vue-modules")
   .resourceQuery(/module/)
   .use("vue-style")
@@ -28,8 +28,8 @@ config.module
   .use("postcss-loader")
   .loader("postcss-loader")
   .end()
-  .use("lessloader")
-  .loader("less-loader")
+  .use("scssloader")
+  .loader("sass-loader")
   .end()
   .end()
   .oneOf("normal")
@@ -46,8 +46,8 @@ config.module
   .use("postcss-loader")
   .loader("postcss-loader")
   .end()
-  .use("lessloader")
-  .loader("less-loader")
+  .use("scssloader")
+  .loader("sass-loader")
   .end()
   .end()
   .oneOf("vue")
@@ -65,8 +65,8 @@ config.module
   .use("postcss-loader")
   .loader("postcss-loader")
   .end()
-  .use("lessloader")
-  .loader("less-loader")
+  .use("scssloader")
+  .loader("sass-loader")
   .end()
   .end()
   .oneOf("normal-modules")
@@ -84,26 +84,11 @@ config.module
   .use("postcss-loader")
   .loader("postcss-loader")
   .end()
-  .use("lessloader")
-  .loader("less-loader")
+  .use("scssloader")
+  .loader("sass-loader")
   .end()
   .end();
 }
 
 
-// });
 
-// config.module
-//   .rule("less")
-//   .test(/\.less$/)
-//   .use("vue-style-loader")
-//     .loader("vue-style-loader")
-//     .end()
-//   .use("style")
-//   .loader("style-loader")
-//   .end()
-//   .use("cssloader")
-//   .loader("css-loader")
-//   .end()
-//   .use("lessloader")
-//   .loader("less-loader");
